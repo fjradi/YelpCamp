@@ -26,7 +26,7 @@ var express                     = require("express"),
     cloudinary                  = require('cloudinary');
 
 //connect to mongodb
-mongoose.connect("mongodb://localhost:27017/yelp_camp_11", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin:aihaibara14@cluster0-e2ftw.mongodb.net/YelpCamp?retryWrites=true");
 
 app.locals.moment = moment;
 
