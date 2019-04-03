@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+    <header class="jumbotron">
+        <h1>This is the Campgrounds Page!</h1>
+        <p>View our hand-picked campgrounds from all over the world</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add a new campground</a>
+        </p>
+    </header>
+    <div class="row" style="display: flex; flex-wrap: wrap;">
+        <% campgrounds.slice().reverse().forEach(function (campground){ %>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="<%= campground.image %>">
+                    <div class="caption text-center">
+                        <h4><%= campground.name %></h4>
+                        <% if (campground.rating === 0) { %>
+                        <em>No reviews yet.</em>
+                        <% } else { %>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star <% if (campground.rating > 1.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 2.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 3.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 4.5) { %> checked <% } %>"></span>
+                        <% } %>
+                    </div>
+                    <p class="text-center">
+                        <a href="/campgrounds/<%= campground._id%>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+<% include ../partials/footer %>
