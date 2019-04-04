@@ -1,4 +1,5 @@
 # YelpCamp
+![preview web page](https://res.cloudinary.com/fjradi/image/upload/v1554350952/Screenshot_from_2019-04-04_11-07-57.png)
 A Node.js web application project from the Udemy course - The Web Developer Bootcamp by Colt Steele
 
 ## Live Demo
